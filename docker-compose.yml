@@ -27,6 +27,8 @@ services:
       - "3000:3000"
     environment:
       - REDIS_URL=redis://redis:6379
+      - AUTH_USERNAME=admin
+      - AUTH_PASSWORD=senha123
     depends_on:
       redis:
         condition: service_healthy
